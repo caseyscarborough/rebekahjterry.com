@@ -58,8 +58,8 @@
 
         {% for job in site.data.experience %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+          <h3 class="resume-item-title" itemprop="name">{{ job.company }} &bull; {{ job.position }}</h3>
+          <h4 class="resume-item-details" itemprop="description">{{ job.duration }} &bull; {{job.location }}</h4>
           <p class="resume-item-copy">{{ job.summary }}</p>
         </div><!-- end of resume-item -->
         {% endfor %}
@@ -232,8 +232,7 @@
       {% endif %}
 
       <footer class="page-footer">
-        <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
-        <p class="footer-line">If this is your live resume, you can modify or remove this part. ;-)</p>
+        <p class="footer-line">Thanks for reading my resume! If you're looking to hire me, contact me <a href="mailto:{{ site.resume_contact_email }}">here</a> :)</p>
       </footer>
 
     </div>
